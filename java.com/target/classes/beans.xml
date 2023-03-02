@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation=
+    "http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="adr" class="java.com.Address">
+<property name="strt" value="sbicolony"></property>
+<property name="city" value="madanapalli"></property>
+<property name="state" value="AP"></property>
+</bean>
+<bean id="cst" class="java.com.Employee">
+<property name="id" value="101"></property>
+<property name="name" value="sicharan"></property>
+<property name="email" value="cherry@gmil.com"></property>
+<property name="adr" ref="adr"></property>
+</bean>
+<bean id="adr1" class="java.com.Address">
+<constructor-arg name="strt" value="indri colony"></constructor-arg>
+<constructor-arg name="cty" value="piler"></constructor-arg>
+<constructor-arg name="state" value="ap"></constructor-arg>
+</bean>
+<bean id="cst1" class="java.com.Employee">
+<constructor-arg name ="id" value="101"></<constructor-arg>
+<constructor-arg name ="name" value="latha"></<constructor-arg>
+<constructor-arg  name ="email" value="latha@gmail.com"></<constructor-arg>
+<constructor-arg name ="adr" ref="adr1"></constructor-arg>
+</bean>
+</beans>
